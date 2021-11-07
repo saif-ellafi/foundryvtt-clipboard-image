@@ -1,4 +1,4 @@
-# Window Controls for Foundry VTT
+# Clipboard Image for Foundry VTT
 
 Allows copy-pasting images from clipboard into Foundry VTT Tiles Layer.
 
