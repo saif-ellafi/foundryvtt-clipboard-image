@@ -1,17 +1,56 @@
+async function clipboardCreateFolderIfMissing(folderPath) {
+  let source = "data";
+  if (typeof ForgeVTT != "undefined" && ForgeVTT.usingTheForge) {
+    source = "forgevtt";
+  }
+  try {
+    await FilePicker.browse(source, folderPath);
+  } catch (error) {
+    await FilePicker.createDirectory(source, folderPath);
+  }
+}
+
+function clipboardGetSource() {
+
+  let source = "data";
+  if (typeof ForgeVTT != "undefined" && ForgeVTT.usingTheForge) {
+    source = "forgevtt";
+  }
+  return source;
+
+}
+
 Hooks.once('ready', async function () {
 
   function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
 
+  game.settings.register('clipboard-image', 'image-location', {
+    name: 'Pasted image location',
+    hint: 'Folder where to save copy-pasted images. Default: clipboard_image',
+    scope: 'world',
+    config: true,
+    type: String,
+    default: "clipboard_image",
+    onChange: async function (newPath) {
+      if (game.user.isGM) {
+        await clipboardCreateFolderIfMissing(newPath);
+      }
+    }
+  });
+
   if (game.user.isGM) {
+
+    await clipboardCreateFolderIfMissing(game.settings.get('clipboard-image', 'image-location'));
 
     document.onpaste = function (pasteEvent) {
 
+
       const items = pasteEvent.clipboardData.items;
       let item;
-      for(let idx=0;idx<items.length;idx++) {
-        if(items[idx].kind==="file") {
+      for (let idx = 0; idx < items.length; idx++) {
+        if (items[idx].kind === "file") {
           item = items[idx];
           break;
         }
@@ -23,13 +62,19 @@ Hooks.once('ready', async function () {
         const reader = new FileReader();
         reader.onload = async function (event) {
 
-          let image = new Image();
-          image.src = event.target.result.toString();
-          await sleep(100); // give time for image to load?
+          const filename = "pasted_image_" + Date.now() + ".png";
+          const file = new File([blob], filename, {type: item.type});
+          const targetFolder = game.settings.get('clipboard-image', 'image-location');
+          const path = targetFolder + "/" + filename;
+          await FilePicker.upload(clipboardGetSource(), targetFolder, file, {});
 
           const curDims = game.scenes.active.dimensions
+          let image = new Image()
           let imgWidth;
           let imgHeight;
+          image.src = path;
+          await sleep(100);
+
           if (image.height > curDims.sceneHeight || image.width > curDims.sceneWidth) {
             imgWidth = curDims.sceneWidth / 3;
             imgHeight = imgWidth * image.height / image.width;
@@ -38,11 +83,13 @@ Hooks.once('ready', async function () {
             imgWidth = image.width;
           }
 
+          image = null;
+
           game.canvas.getLayer("BackgroundLayer").activate();
           const mousePos = canvas.app.renderer.plugins.interaction.mouse.getLocalPosition(canvas.stage);
 
           let newTile = [{
-            img: event.target.result.toString(),
+            img: path,
             width: imgWidth,
             height: imgHeight,
             scale: 1,
