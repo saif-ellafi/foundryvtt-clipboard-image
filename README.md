@@ -2,6 +2,8 @@
 
 Allows pasting images from clipboard into Foundry VTT Tiles Layer
 
+**WARNING: AVOID LARGE IMAGES!!! Larger than canvas will be resized to smaller but the inner image would still be at high resolution and can crash your instance**
+
 **Recommended Together with [Minimal UI](https://github.com/saif-ellafi/foundryvtt-minimal-ui) and [Super Select](https://github.com/saif-ellafi/foundryvtt-super-select)**
 
 [Invite me a coffee if you like this :D](#by-jeansenvaars)
