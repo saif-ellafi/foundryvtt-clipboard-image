@@ -1,12 +1,18 @@
 # Window Controls for Foundry VTT
 
-Allows pasting images from clipboard into Foundry VTT Tiles Layer
+Allows pasting images from clipboard into Foundry VTT Tiles Layer.
 
-##WARNING
-**AVOID LARGE IMAGES!!!** Larger than canvas will be resized to smaller but the inner image would still be at high resolution and can crash your instance
+Switches to Tile Layer after pasting.
 
-##Recommended With 
+## WARNING
+**AVOID LARGE IMAGES!!!** Larger than canvas will be resized to smaller but the inner image would still be at high resolution and can crash your Foundry!!!
+
+## Recommended With 
 [Minimal UI](https://github.com/saif-ellafi/foundryvtt-minimal-ui) and [Super Select](https://github.com/saif-ellafi/foundryvtt-super-select)
+
+## ToDo
+* More Testing
+* More Configurable Options
 
 ### [Invite me a coffee if you like this module :D](https://ko-fi.com/jeansenvaars)
 
