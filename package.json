@@ -1,0 +1,33 @@
+{
+  "name": "foundryvtt-clipboard-image",
+  "version": "0.0.1",
+  "description": "Paste images from Clipboard into Tiles",
+  "main": "clipboard-image.js",
+  "scripts": {
+    "copy": "mkdir -p dist && cp ./clipboard-image.js dist/ && cp ./README.md dist/ && cp ./CHANGELOG.md dist/ && cp ./LICENSE.md dist/ && cp ./module.json dist/ && cp ./THANKS.txt dist/",
+    "copyWin": "mkdir dist && copy module.json dist && copy clipboard-image.js dist && copy README.md dist && copy CHANGELOG.md dist && copy LICENSE.md dist && copy module.json dist && copy THANKS.txt dist",
+    "zip": "npm-build-zip --source=dist --destination=.",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saif-ellafi/foundryvtt-clipboard-image.git"
+  },
+  "keywords": [
+    "foundry",
+    "vtt",
+    "clipboard",
+    "image",
+    "paste",
+    "tile"
+  ],
+  "author": "JeansenVaars (Saif Ellafi)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/saif-ellafi/foundryvtt-clipboard-image/issues"
+  },
+  "homepage": "https://github.com/saif-ellafi/foundryvtt-clipboard-image",
+  "devDependencies": {
+    "npm-build-zip": "^1.0.3"
+  }
+}
