@@ -19,7 +19,6 @@ Allows pasting images from clipboard into Foundry VTT Tiles Layer
 * Super Select
 
 # Appreciations
-* Thanks to libWrapper by ruipin: UI is less prone to conflicts!
 * Thanks to the FoundryVTT Discord community for the amazing issue reports and feedback.
 
 # License
