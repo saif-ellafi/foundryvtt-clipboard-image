@@ -28,11 +28,11 @@ Hooks.once('ready', async function () {
 
   game.settings.register('clipboard-image', 'image-location', {
     name: 'Pasted image location',
-    hint: 'Folder where to save copy-pasted images. Default: clipboard_image',
+    hint: 'Folder where to save copy-pasted images. Default: pasted_images',
     scope: 'world',
     config: true,
     type: String,
-    default: "clipboard_image",
+    default: "pasted_images",
     onChange: async function (newPath) {
       if (game.user.isGM) {
         await clipboardCreateFolderIfMissing(newPath);

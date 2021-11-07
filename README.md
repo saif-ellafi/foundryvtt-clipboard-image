@@ -10,7 +10,7 @@ Allows pasting images from clipboard into Foundry VTT Tiles Layer.
 2. Go to Foundry, focus on the Canvas and Press CTRL+V
 3. If an Image is found in your Clipboard, it will paste the image under your mouse and switch you to the Tiles layer.
 
-**Note 1:** Images uploaded to a folder called `clipboard_image` by default. This can be configured per world in the settings.
+**Note 1:** Images uploaded to a folder called `pasted_images` by default. This can be configured per world in the settings.
 
 **Note 2:** If an image is larger than Canvas dimensions, then the Tile (not image) will be pasted as 1/3 the size of the canvas,
 while holding image proportions.
