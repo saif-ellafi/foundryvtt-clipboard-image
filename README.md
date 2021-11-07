@@ -3,23 +3,29 @@
 Allows pasting images from clipboard into Foundry VTT Tiles Layer.
 
 ### Usage
-1. Copy an Image you like from the internet
-   1. Right Click + Copy Image
-   2. (RECOMMENDED) take an Area Screenshot with Snipping Tool or equivalent software
+
+1. Copy an Image you like
+    1. Right-Click + Copy Image
+    2. (RECOMMENDED) take an Area Screenshot with Snipping Tool or equivalent software
 2. Go to Foundry, focus on the Canvas and Press CTRL+V
 3. If an Image is found in your Clipboard, it will paste the image under your mouse and switch you to the Tiles layer.
 
-**Note:** If an image is larger than Canvas dimensions, then the image will be shrinked to 1/3 the size of the canvas, while holding image proportions.
+**Note:** If an image is larger than Canvas dimensions, then the image will be shrinked to 1/3 the size of the canvas,
+while holding image proportions.
 
-## WARNING
+## DOs and DON'Ts
 
-**AVOID LARGE IMAGES!!!** Pasting Large images will bring problems to your FoundryVTT. Try to copy small images or better, take **area screenshots** so you don't copy HD images from source. 
+### 1
 
-## Recommendation
+**AVOID LARGE IMAGES!!!** Pasting Large images with this method will impact Foundry VTT performance! Make sure you don't copy large images or better, use Screenshot Taking tools (for example WIN+SHIFT+S opens the Snipping Tool in windows)
 
-To avoid large images and performance issues, it is better to take an area screenshot of the image you would like. For
-example with Window's `Snipping Tool` or equivalent. An Area screenshout would pan the image to how you see it and thus
-much smaller than the original image behind it.
+### 2
+
+Copy-Pasting with this module is just a convenient method to get by in the heat of the moment. I recommend, by the end of a session, to convert the copy-pasted images into appropriate uploaded images with FoundryVTT. Specially if the copy-pasted images are large or too many.
+
+### Technichalities
+
+Image sources are stored in Base64 within the tile properties of the tile, within the world. Most screenshot tools and browser image copying should convert to base64 by today's standards. If you have any better methods to get this done, pull requests are obviously welcome.
 
 ## Recommended With
 
