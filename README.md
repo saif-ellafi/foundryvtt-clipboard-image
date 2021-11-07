@@ -22,6 +22,10 @@ while holding image proportions.
 [Minimal UI](https://github.com/saif-ellafi/foundryvtt-minimal-ui)
 and [Super Select](https://github.com/saif-ellafi/foundryvtt-super-select)
 
+## Appreciations
+
+* @theripper93 for proposing a much better way of achieving this. Without his help this module would have struggled!
+
 ## ToDo
 
 * More Testing
