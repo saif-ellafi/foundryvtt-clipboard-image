@@ -6,7 +6,7 @@ Allows copy-pasting images from clipboard into Foundry VTT Tiles Layer.
 
 1. Copy an Image you like from any source
     1. Right-Click + Copy Image (keeps original image quality)
-    2. Take an Area Screenshot with Snipping Tool or equivalent software (Makes it smaller than source, meaning lighter)
+    2. Take an Area Screenshot with Snipping Tool (SHIFT+WIN+S) or equivalent software (Makes it smaller than source, meaning lighter)
 2. Go to Foundry, focus on the Canvas and Press CTRL+V
 3. If an Image is found in your Clipboard, it will paste the image under your mouse and switch you to the Tiles layer.
 
