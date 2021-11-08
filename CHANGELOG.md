@@ -1,3 +1,9 @@
+### 0.0.6
+* CapsLock ON will paste images hidden to players
+* Slight improve in performance with large files and slow network connections
+* Multiple times pasting will be ignored until previous paste finished
+* Paste is cancelled once if there was a copied object from the canvas (notice given)
+
 ### 0.0.5
 * Fixed pasting images that resulted in tiles of size 0 in certain cases (Thank you @vttom)
 
