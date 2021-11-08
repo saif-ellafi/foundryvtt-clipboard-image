@@ -8,6 +8,8 @@ Allows copy-pasting images from clipboard into Foundry VTT Tiles Layer.
 2. Go to Foundry, focus on the Canvas and Press CTRL+V
 3. If an Image is found in your Clipboard, it will paste the image under your mouse and switch you to the Tiles layer.
 
+### [Invite me a coffee if you like this module :D](https://ko-fi.com/jeansenvaars)
+
 **Functionalities**
 
 1. Images uploaded to a folder called `pasted_images` by default. This can be configured per world in the settings. If
@@ -33,8 +35,6 @@ and [Super Select](https://github.com/saif-ellafi/foundryvtt-super-select)
 
 * More Testing
 * More Configurable Options
-
-### [Invite me a coffee if you like this module :D](https://ko-fi.com/jeansenvaars)
 
 ![example](example.gif)
 
