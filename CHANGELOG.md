@@ -1,5 +1,5 @@
 ### 0.0.5
-* Fixed pasting images that resulted in tiles of size 0 in certain cases
+* Fixed pasting images that resulted in tiles of size 0 in certain cases (Thank you @vttom)
 
 ### 0.0.4
 * Fixed path recognition of image (should work now on the Forge)
