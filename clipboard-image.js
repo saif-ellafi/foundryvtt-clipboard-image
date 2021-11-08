@@ -1,4 +1,4 @@
-async function clipboardCreateFolderIfMissing(folderPath) {
+async function _clipboardCreateFolderIfMissing(folderPath) {
   let source = "data";
   if (typeof ForgeVTT != "undefined" && ForgeVTT.usingTheForge) {
     source = "forgevtt";
@@ -10,21 +10,15 @@ async function clipboardCreateFolderIfMissing(folderPath) {
   }
 }
 
-function clipboardGetSource() {
-
+function _clipboardGetSource() {
   let source = "data";
   if (typeof ForgeVTT != "undefined" && ForgeVTT.usingTheForge) {
     source = "forgevtt";
   }
   return source;
-
 }
 
 Hooks.once('ready', async function () {
-
-  function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
 
   game.settings.register('clipboard-image', 'image-location', {
     name: 'Pasted image location',
@@ -35,14 +29,14 @@ Hooks.once('ready', async function () {
     default: "pasted_images",
     onChange: async function (newPath) {
       if (game.user.isGM) {
-        await clipboardCreateFolderIfMissing(newPath);
+        await _clipboardCreateFolderIfMissing(newPath);
       }
     }
   });
 
   if (game.user.isGM) {
 
-    await clipboardCreateFolderIfMissing(game.settings.get('clipboard-image', 'image-location'));
+    await _clipboardCreateFolderIfMissing(game.settings.get('clipboard-image', 'image-location'));
 
     document.onpaste = function (pasteEvent) {
 
@@ -65,15 +59,14 @@ Hooks.once('ready', async function () {
           const filename = "pasted_image_" + Date.now() + ".png";
           const file = new File([blob], filename, {type: item.type});
           const targetFolder = game.settings.get('clipboard-image', 'image-location');
-          const path = targetFolder + "/" + filename;
-          await FilePicker.upload(clipboardGetSource(), targetFolder, file, {});
+          const path = (await FilePicker.upload(_clipboardGetSource(), targetFolder, file, {})).path;
 
           const curDims = game.scenes.active.dimensions
           let image = new Image()
           let imgWidth;
           let imgHeight;
           image.src = path;
-          await sleep(100);
+          await new Promise(resolve => setTimeout(resolve, 100));
 
           if (image.height > curDims.sceneHeight || image.width > curDims.sceneWidth) {
             imgWidth = curDims.sceneWidth / 3;

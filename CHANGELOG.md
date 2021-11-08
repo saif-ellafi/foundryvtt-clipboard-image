@@ -1,3 +1,6 @@
+### 0.0.4
+* Fixed path recognition of image (should work now on the Forge)
+
 ### 0.0.3
 * Changed default dir to pasted_images
 
