@@ -25,6 +25,7 @@ and [Super Select](https://github.com/saif-ellafi/foundryvtt-super-select)
 ## Appreciations
 
 * @theripper93 for proposing a much better way of achieving this. Without his help this module would have struggled!
+* @vttom for an amazing helpful attitude to get this module working properly in **The Forge**
 
 ## ToDo
 
