@@ -6,14 +6,17 @@ Allows copy-pasting images from clipboard into Foundry VTT Tiles Layer.
 
 1. Copy an Image you like from any source
     1. Right-Click + Copy Image (keeps original image quality)
-    2. Take an Area Screenshot with Snipping Tool (SHIFT+WIN+S) or equivalent software (Makes it smaller than source, meaning lighter)
+    2. Take an Area Screenshot with Snipping Tool (SHIFT+WIN+S) or equivalent software (Makes it smaller than source,
+       meaning lighter)
 2. Go to Foundry, focus on the Canvas and Press CTRL+V
 3. If an Image is found in your Clipboard, it will paste the image under your mouse and switch you to the Tiles layer.
 
-**Note 1:** Images uploaded to a folder called `pasted_images` by default. This can be configured per world in the settings.
+**Note 1:** Images uploaded to a folder called `pasted_images` by default. This can be configured per world in the
+settings. If you would like for example to store pasted images within your specific world, then you can
+set `worlds/<my-world>/pasted_images`
 
-**Note 2:** If an image is larger than Canvas dimensions, then the Tile (not image) will be pasted as 1/3 the size of the canvas,
-while holding image proportions.
+**Note 2:** If an image is larger than Canvas dimensions, then the Tile (not image) will be pasted as 1/3 the size of
+the canvas, while holding image proportions.
 
 **Note 3:** Should work with `The Forge` but have not tested! Feedback welcome.
 
