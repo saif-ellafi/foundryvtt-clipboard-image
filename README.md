@@ -26,6 +26,13 @@ Allows copy-pasting images from clipboard into Foundry VTT Tiles Layer.
 [Minimal UI](https://github.com/saif-ellafi/foundryvtt-minimal-ui)
 and [Super Select](https://github.com/saif-ellafi/foundryvtt-super-select)
 
+## Known Issues
+
+If you are using **Chat Images** module, it may happen that pasting an image on the chat, if the chat panel is located somewhere
+on top of the scene canvas, it might paste the image also on the scene. I could not yet find a solution for this, but
+the circumstances are rare enough, it should not be an issue on a regula basis. This is due **Chat Image** disabling the focus on the chat,
+when pasting, making me think that the mouse is prioritized on the scene instead of the chat.
+
 ## Appreciations
 
 * @theripper93 for proposing a much better way of achieving this. Without his help this module would have struggled!

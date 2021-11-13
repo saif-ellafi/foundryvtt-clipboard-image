@@ -78,6 +78,14 @@ Hooks.once('ready', async function () {
                     canvas.activeLayer._copy = [];
                     return;
                 }
+
+                game.canvas.getLayer("BackgroundLayer").activate();
+                const mousePos = canvas.app.renderer.plugins.interaction.mouse.getLocalPosition(canvas.stage);
+
+                if (document.activeElement !== $(".game")[0] ||
+                    mousePos.x < 0 || mousePos.y < 0 ||
+                    mousePos.x > canvas.dimensions.width || mousePos.y > canvas.dimensions.height) return;
+
                 CLIPBOARD_IMAGE_LOCKED = true;
                 const blob = item.getAsFile();
 
@@ -102,9 +110,6 @@ Hooks.once('ready', async function () {
                             imgWidth = curDims.sceneWidth / 3;
                             imgHeight = imgWidth * imgHeight / origWidth;
                         }
-
-                        game.canvas.getLayer("BackgroundLayer").activate();
-                        const mousePos = canvas.app.renderer.plugins.interaction.mouse.getLocalPosition(canvas.stage);
 
                         let newTile = [{
                             img: path,
