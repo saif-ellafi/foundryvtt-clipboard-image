@@ -1,3 +1,6 @@
+### 0.0.7
+* Ignore paste events when focus is not on the scene canvas
+
 ### 0.0.6
 * CapsLock ON will paste images hidden to players
 * Slight improve in performance with large files and slow network connections
