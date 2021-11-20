@@ -74,8 +74,7 @@ Hooks.once('ready', async function () {
 
             if (item) {
                 if (canvas.activeLayer._copy.length) {
-                    ui.notifications.warn("Image Clipboard: Priority given to previously copied objects. Clipboard cleared.");
-                    canvas.activeLayer._copy = [];
+                    console.warn("Image Clipboard: Priority given to Foundry copied objects. Ctrl+C on empty space to clear clipboard.");
                     return;
                 }
 

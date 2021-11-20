@@ -1,3 +1,6 @@
+### 0.0.8
+* Given absolute priority to Clipboard in FoundryVTT
+
 ### 0.0.7
 * Ignore paste events when focus is not on the scene canvas
 
