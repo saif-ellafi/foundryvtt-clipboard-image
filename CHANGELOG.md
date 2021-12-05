@@ -1,3 +1,6 @@
+### 0.1.0
+* Support for V9
+
 ### 0.0.8
 * Given absolute priority to Clipboard in FoundryVTT
 
