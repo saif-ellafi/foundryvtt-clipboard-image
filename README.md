@@ -1,3 +1,4 @@
+![GitHub all releases](https://img.shields.io/github/downloads/saif-ellafi/foundryvtt-clipboard-image/total?logo=GitHub) ![GitHub release (latest by date)](https://img.shields.io/github/downloads/saif-ellafi/foundryvtt-clipboard-image/latest/total) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/saif-ellafi/foundryvtt-clipboard-image) ![GitHub issues](https://img.shields.io/github/issues-raw/saif-ellafi/foundryvtt-clipboard-image) ![GitHub](https://img.shields.io/github/license/saif-ellafi/foundryvtt-clipboard-image)
 # Clipboard Image for Foundry VTT
 
 Allows copy-pasting images from clipboard into Foundry VTT Tiles Layer.
