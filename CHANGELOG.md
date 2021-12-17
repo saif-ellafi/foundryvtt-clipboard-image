@@ -1,3 +1,6 @@
+### 0.1.2
+* Updated compatibility version to V9.236
+
 ### 0.1.1
 * Updated compatibility version to V9.235
 

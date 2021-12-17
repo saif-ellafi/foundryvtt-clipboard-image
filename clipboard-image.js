@@ -117,7 +117,7 @@ Hooks.once('init', function() {
     name: "Paste Image from Clipboard",
     restricted: true,
     uneditable: [
-      {key: "V", modifiers: [ "CONTROL" ]}
+      {key: "KeyV", modifiers: [ KeyboardManager.MODIFIER_KEYS.CONTROL ]}
     ],
     onDown: () => {
       let succeeded = false;
