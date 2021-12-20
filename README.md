@@ -1,6 +1,6 @@
 ![GitHub all releases](https://img.shields.io/github/downloads/saif-ellafi/foundryvtt-clipboard-image/total?logo=GitHub) ![GitHub release (latest by date)](https://img.shields.io/github/downloads/saif-ellafi/foundryvtt-clipboard-image/latest/total) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/saif-ellafi/foundryvtt-clipboard-image) ![GitHub issues](https://img.shields.io/github/issues-raw/saif-ellafi/foundryvtt-clipboard-image) ![GitHub](https://img.shields.io/github/license/saif-ellafi/foundryvtt-clipboard-image)
 # Clipboard Image for Foundry VTT
-### _Created by: JeansenVaars_
+### _Created by: JeansenVaars_ - [Invite me a coffee if you like this module :D](https://ko-fi.com/jeansenvaars)
 
 Allows copy-pasting images from clipboard into Foundry VTT Tiles Layer.
 
@@ -9,8 +9,6 @@ Allows copy-pasting images from clipboard into Foundry VTT Tiles Layer.
 1. Copy an Image you like from any source (internet, file or a screenshot)
 2. Go to Foundry, focus on the Canvas and Press CTRL+V
 3. If an Image is found in your Clipboard, it will paste the image under your mouse and switch you to the Tiles layer.
-
-### [Invite me a coffee if you like this module :D](https://ko-fi.com/jeansenvaars)
 
 **Functionalities**
 
