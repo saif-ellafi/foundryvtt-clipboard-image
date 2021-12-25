@@ -4,6 +4,7 @@
 Allows copy-pasting images directly into Foundry VTT Tiles Layer.
 
 ### _Created by: JeansenVaars_ - [Invite me a coffee if you like this module :D](https://ko-fi.com/jeansenvaars)
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/V7V14D3AH)
 
 ![example](example.gif)
 
