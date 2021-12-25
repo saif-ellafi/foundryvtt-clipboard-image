@@ -1,8 +1,11 @@
 ![GitHub all releases](https://img.shields.io/github/downloads/saif-ellafi/foundryvtt-clipboard-image/total?logo=GitHub) ![GitHub release (latest by date)](https://img.shields.io/github/downloads/saif-ellafi/foundryvtt-clipboard-image/latest/total) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/saif-ellafi/foundryvtt-clipboard-image) ![GitHub issues](https://img.shields.io/github/issues-raw/saif-ellafi/foundryvtt-clipboard-image) ![GitHub](https://img.shields.io/github/license/saif-ellafi/foundryvtt-clipboard-image)
 # Clipboard Image for Foundry VTT
+
+Allows copy-pasting images directly into Foundry VTT Tiles Layer.
+
 ### _Created by: JeansenVaars_ - [Invite me a coffee if you like this module :D](https://ko-fi.com/jeansenvaars)
 
-Allows copy-pasting images from clipboard into Foundry VTT Tiles Layer.
+![example](example.gif)
 
 ### Usage
 
@@ -37,13 +40,6 @@ when pasting, making me think that the mouse is prioritized on the scene instead
 
 * @theripper93 for proposing a much better way of achieving this. Without his help this module would have struggled!
 * @vttom for an amazing helpful attitude to get this module working properly in **The Forge**
-
-## ToDo
-
-* More Testing
-* More Configurable Options
-
-![example](example.gif)
 
 ## By JeansenVaars
 
