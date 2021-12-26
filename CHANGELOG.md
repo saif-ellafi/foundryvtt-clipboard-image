@@ -1,3 +1,6 @@
+### 0.1.3
+* Use a filepicker in settings to selected pasted folders location
+
 ### 0.1.2
 * Updated compatibility version to V9.236
 

@@ -150,11 +150,7 @@ Hooks.once('init', function() {
     config: true,
     type: String,
     default: "pasted_images",
-    onChange: async function (newPath) {
-      if (game.user.isGM) {
-        await _clipboardCreateFolderIfMissing(newPath);
-      }
-    }
+    filePicker: 'folder'
   });
 
 });
