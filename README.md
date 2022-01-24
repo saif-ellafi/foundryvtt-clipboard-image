@@ -14,6 +14,11 @@ Allows copy-pasting images directly into Foundry VTT Tiles Layer.
 2. Go to Foundry, focus on the Canvas and Press CTRL+V
 3. If an Image is found in your Clipboard, it will paste the image under your mouse and switch you to the Tiles layer.
 
+**Browser Support**
+
+Firefox Won't work by default. Version 90+ Disabled Clipboard API paste function. It won't work there unless you enable 
+`dom.events.asyncClipboard.read` and `dom.events.testing.asyncClipboard` in `about:config` or use a Chromium based browser instead.
+
 **Functionalities**
 
 1. Images uploaded to a folder called `pasted_images` by default. This can be configured per world in the settings. If
