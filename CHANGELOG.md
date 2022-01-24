@@ -1,3 +1,6 @@
+### 0.1.4
+* Handle errors when using a browser without clipboard api support
+
 ### 0.1.3
 * Use a filepicker in settings to selected pasted folders location
 

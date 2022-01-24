@@ -34,7 +34,9 @@ async function _extractFromClipboard() {
   try {
     clipItems = await navigator.clipboard.read();
   } catch (error) {
-    if (error instanceof DOMException) {
+    if (!error) {
+      console.warn('Failed to parse clipboard. Make sure your browser supports the navigator API');
+    } else if (error instanceof DOMException) {
       console.log('image-clipboard: Clipboard is empty');
     } else
       throw error;
@@ -113,44 +115,53 @@ document.addEventListener("keydown", event => {
 });
 
 Hooks.once('init', function() {
-  game.keybindings.register("clipboard-image", "paste-image", {
-    name: "Paste Image from Clipboard",
-    restricted: true,
-    uneditable: [
-      {key: "KeyV", modifiers: [ KeyboardManager.MODIFIER_KEYS.CONTROL ]}
-    ],
-    onDown: () => {
-      let succeeded = false;
-      if (canvas.activeLayer._copy.length) {
-        console.warn("Image Clipboard: Priority given to Foundry copied objects.");
-        return succeeded;
-      }
-      if (CLIPBOARD_IMAGE_LOCKED) return succeeded;
-      _extractFromClipboard().then((clipItems) => {
-        if (clipItems) {
-          _clipboardCreateFolderIfMissing(game.settings.get('clipboard-image', 'image-location')).then(() => {
-            _extractBlob(clipItems).then((blob) => {
-              if (blob) {
-                _pasteBlob(blob);
-                succeeded = true
-              }
-            });
-          });
+  if (navigator.clipboard.read) {
+    game.keybindings.register("clipboard-image", "paste-image", {
+      name: "Paste Image from Clipboard",
+      restricted: true,
+      uneditable: [
+        {key: "KeyV", modifiers: [ KeyboardManager.MODIFIER_KEYS.CONTROL ]}
+      ],
+      onDown: () => {
+        let succeeded = false;
+        if (canvas.activeLayer._copy.length) {
+          console.warn("Image Clipboard: Priority given to Foundry copied objects.");
+          return succeeded;
         }
-      });
-      return succeeded;
-    },
-    precedence: CONST.KEYBINDING_PRECEDENCE.PRIORITY
-  });
+        if (CLIPBOARD_IMAGE_LOCKED) return succeeded;
+        _extractFromClipboard().then((clipItems) => {
+          if (clipItems) {
+            _clipboardCreateFolderIfMissing(game.settings.get('clipboard-image', 'image-location')).then(() => {
+              _extractBlob(clipItems).then((blob) => {
+                if (blob) {
+                  _pasteBlob(blob);
+                  succeeded = true
+                }
+              });
+            });
+          }
+        });
+        return succeeded;
+      },
+      precedence: CONST.KEYBINDING_PRECEDENCE.PRIORITY
+    });
 
-  game.settings.register('clipboard-image', 'image-location', {
-    name: 'Pasted image location',
-    hint: 'Folder where to save copy-pasted images. Default: pasted_images',
-    scope: 'world',
-    config: true,
-    type: String,
-    default: "pasted_images",
-    filePicker: 'folder'
-  });
+    game.settings.register('clipboard-image', 'image-location', {
+      name: 'Pasted image location',
+      hint: 'Folder where to save copy-pasted images. Default: pasted_images',
+      scope: 'world',
+      config: true,
+      type: String,
+      default: "pasted_images",
+      filePicker: 'folder'
+    });
+  }
 
+});
+
+Hooks.once('ready', function() {
+  if (game.user.isGM && !navigator.clipboard.read) {
+    ui.notifications.warn("Clipboard Image: Disabled - Your browser does not support clipboard functions. Please check the console");
+    console.warn("Clipboard Image was not initialized. If you are on Firefox: I need dom.events.asyncClipboard.read and dom.events.testing.asyncClipboard browser functions enabled. Or try with any Chromium based browser");
+  }
 });
