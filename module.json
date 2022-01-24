@@ -5,7 +5,7 @@
 	"description": "Paste images from Clipboard into Tiles",
 	"version": "0.1.4",
 	"minimumCoreVersion": "9.236",
-	"compatibleCoreVersion": "9.238",
+	"compatibleCoreVersion": "9",
 	"scripts": [ "clipboard-image.js" ],
 	"url": "https://github.com/saif-ellafi/foundryvtt-clipboard-image.git",
 	"manifest": "https://github.com/saif-ellafi/foundryvtt-clipboard-image/releases/latest/download/module.json",
