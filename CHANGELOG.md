@@ -1,3 +1,6 @@
+### 0.1.5
+* Fixed some image sources not working at all on copy-paste (Thank you, @Opius for reporting)
+
 ### 0.1.4
 * Handle errors when using a browser without clipboard api support
 

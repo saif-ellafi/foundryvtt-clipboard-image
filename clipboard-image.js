@@ -46,10 +46,10 @@ async function _extractFromClipboard() {
 
 async function _extractBlob(clipItems) {
   let blob;
-  for (let idx = 0; idx < clipItems.length; idx++) {
-    const ftype = clipItems[idx].types[0];
+  for (let idx = 0; idx < clipItems[0].types.length; idx++) {
+    const ftype = clipItems[0].types[idx];
     if (ftype.startsWith("image/")) {
-      blob = await clipItems[idx].getType(ftype);
+      blob = await clipItems[0].getType(ftype);
       break;
     }
   }
@@ -130,7 +130,7 @@ Hooks.once('init', function() {
         }
         if (CLIPBOARD_IMAGE_LOCKED) return succeeded;
         _extractFromClipboard().then((clipItems) => {
-          if (clipItems) {
+          if (clipItems?.length) {
             _clipboardCreateFolderIfMissing(game.settings.get('clipboard-image', 'image-location')).then(() => {
               _extractBlob(clipItems).then((blob) => {
                 if (blob) {
