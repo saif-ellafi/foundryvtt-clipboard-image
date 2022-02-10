@@ -1,3 +1,6 @@
+### 0.1.6
+* Handle errors when server is not ssl encrypted
+
 ### 0.1.5
 * Fixed some image sources not working at all on copy-paste (Thank you, @Opius for reporting)
 

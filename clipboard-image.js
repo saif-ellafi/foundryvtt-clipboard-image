@@ -115,7 +115,7 @@ document.addEventListener("keydown", event => {
 });
 
 Hooks.once('init', function() {
-  if (navigator.clipboard.read) {
+  if (navigator.clipboard?.read) {
     game.keybindings.register("clipboard-image", "paste-image", {
       name: "Paste Image from Clipboard",
       restricted: true,
@@ -160,8 +160,8 @@ Hooks.once('init', function() {
 });
 
 Hooks.once('ready', function() {
-  if (game.user.isGM && !navigator.clipboard.read) {
+  if (game.user.isGM && !navigator.clipboard?.read) {
     ui.notifications.warn("Clipboard Image: Disabled - Your browser does not support clipboard functions. Please check the console");
-    console.warn("Clipboard Image was not initialized. If you are on Firefox: I need dom.events.asyncClipboard.read and dom.events.testing.asyncClipboard browser functions enabled. Or try with any Chromium based browser");
+    console.warn("Clipboard Image was not initialized. Either this hostname is missing certificates or if you are on Firefox: I need dom.events.asyncClipboard.read and dom.events.testing.asyncClipboard browser functions enabled. Or try with any Chromium based browser");
   }
 });
