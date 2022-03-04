@@ -16,7 +16,7 @@ Allows copy-pasting images directly into Foundry VTT Tiles Layer.
 
 ### Servers without HTTPS or Domain
 The browser won't trust your server for Clipboard access if you are running a server on an IP Address for example. Going to `about:flags` in your browser and trusting your server can be done here, before Image Clipboard works
-![Uploading image.png…]()
+![image](https://user-images.githubusercontent.com/27952699/156756889-7117a0de-43eb-434b-bdde-8c36798c3a37.png)
 
 ### Firefox Support
 
