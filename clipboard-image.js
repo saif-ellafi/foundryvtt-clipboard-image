@@ -57,7 +57,7 @@ async function _extractBlob(clipItems) {
 }
 
 function _pasteBlob(blob) {
-  game.canvas.background.activate();
+  game.canvas.tiles.activate();
   const mousePos = canvas.app.renderer.plugins.interaction.mouse.getLocalPosition(canvas.stage);
 
   if (document.activeElement !== $(".game")[0] ||

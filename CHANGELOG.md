@@ -1,3 +1,6 @@
+### 0.2.0
+* Support Foundry V10
+
 ### 0.1.6
 * Handle errors when server is not ssl encrypted
 
