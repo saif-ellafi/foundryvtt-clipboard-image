@@ -1,3 +1,6 @@
+### 0.3.1
+* Support Foundry V11 (Fixed)
+
 ### 0.3.0
 * Support Foundry V11
 
