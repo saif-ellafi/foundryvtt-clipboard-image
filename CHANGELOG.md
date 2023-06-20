@@ -1,3 +1,6 @@
+### 0.3.0
+* Support Foundry V11
+
 ### 0.2.0
 * Support Foundry V10
 

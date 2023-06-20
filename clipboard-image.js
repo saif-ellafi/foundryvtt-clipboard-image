@@ -58,7 +58,7 @@ async function _extractBlob(clipItems) {
 
 function _pasteBlob(blob) {
   game.canvas.tiles.activate();
-  const mousePos = canvas.app.renderer.plugins.interaction.mouse.getLocalPosition(canvas.stage);
+  const mousePos = canvas.app.renderer.events.pointer.getLocalPosition(canvas.stage);
 
   if (document.activeElement !== $(".game")[0] ||
     mousePos.x < 0 || mousePos.y < 0 ||
