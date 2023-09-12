@@ -1,3 +1,6 @@
+### 0.3.2
+* Won't paste if Tokenizer is open
+
 ### 0.3.1
 * Support Foundry V11 (Fixed)
 

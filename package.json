@@ -1,6 +1,6 @@
 {
   "name": "foundryvtt-clipboard-image",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Paste images from Clipboard into Tiles",
   "main": "clipboard-image.js",
   "scripts": {

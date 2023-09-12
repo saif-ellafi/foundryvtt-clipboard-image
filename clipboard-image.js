@@ -129,6 +129,9 @@ Hooks.once('init', function() {
           return succeeded;
         }
         if (CLIPBOARD_IMAGE_LOCKED) return succeeded;
+        if (game.modules.get('vtta-tokenizer')?.active &&
+            Object.values(ui.windows).filter(w => w.id === 'tokenizer-control').length)
+              return succeeded;
         _extractFromClipboard().then((clipItems) => {
           if (clipItems?.length) {
             _clipboardCreateFolderIfMissing(game.settings.get('clipboard-image', 'image-location')).then(() => {
