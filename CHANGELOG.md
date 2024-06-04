@@ -1,3 +1,6 @@
+### 0.4.0
+* Support Foundry V12
+
 ### 0.3.2
 * Won't paste if Tokenizer is open
 

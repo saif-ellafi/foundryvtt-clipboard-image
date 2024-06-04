@@ -89,13 +89,14 @@ function _pasteBlob(blob) {
       }
 
       let newTile = [{
-        img: path,
+        texture: {
+          src: path,
+        },
         width: imgWidth,
         height: imgHeight,
-        scale: 1,
         x: mousePos.x,
         y: mousePos.y,
-        z: 0,
+        sort: 0,
         rotation: 0,
         hidden: CLIPBOARD_HIDDEN_MODE,
         locked: false,
